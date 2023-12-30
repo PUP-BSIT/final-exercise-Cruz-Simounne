@@ -1,1 +1,6 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/nn2YhwXT)
+# Simounne's Personal Website
+
+"Welcome! I'm thrilled to have you here. 
+Explore my world and discover more about myself. Enjoy your visit!"
+
+Click the following link: https://cruz-simounne.netlify.app/
