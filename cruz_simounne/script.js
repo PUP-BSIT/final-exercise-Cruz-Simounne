@@ -1,61 +1,63 @@
-const get = (id) => document.getElementById(id);
-const val = (id) => get(id).value.trim();
-const createComment = (full_name, comment) => {
-    const newComment = document.createElement('div');
-    newComment.classList.add('comment');
-    newComment.innerHTML = `<p><strong>${full_name}: </strong>${comment}</p>`;
-    newComment.dataset.date = new Date().toISOString();
-    return newComment;
-};
+document.addEventListener('DOMContentLoaded', function () {
+    const get = (id) => document.getElementById(id);
 
-function updateCommentButton() {
-    const full_name = get('full_name').value;
-    const comment = get('comment').value;
-    const comment_button = get('comment_button');
-    
-    comment_button.disabled = full_name.trim() || comment.trim();
-}
+    const createComment = (full_name, comment) => {
+        const newComment = document.createElement('div');
+        newComment.classList.add('comment');
+        newComment.innerHTML = 
+        `<p><strong>${full_name}: </strong>${comment}</p>`;
+        newComment.dataset.date = new Date().toISOString();
+        return newComment;
+    };
 
-function addComment() {
-    const full_name = get('full_name').value;
-    const comment = get('comment').value;
-    const commentContainer = get('comments-container');
-    const newComment = createComment(full_name, comment);
-    commentContainer.prepend(newComment);
-    get('full_name').value = '';
-    get('comment').value = '';
-}
+    function updateCommentButton() {
+        const full_name = get('full_name').value;
+        const comment = get('comment').value;
+        const comment_button = get('comment_button');
 
-function sortComments(order) {
-    const commentContainer = get('comments-container');
-    const comments = Array.from(commentContainer.children);
+        console.log("Full Name:", full_name);
+        console.log("Comment:", comment);
 
-    comments.sort(function(a, b) {
-        const dateA = new Date(a.dataset.date);
-        const dateB = new Date(b.dataset.date);
+        comment_button.disabled = !(full_name.trim() && comment.trim());
+    }
 
-        return order === 'asc' ? dateA - dateB : dateB - dateA;
+    function addComment(event) {
+        event.preventDefault();
+        const full_name = get('full_name').value;
+        const comment = get('comment').value;
+        const commentContainer = get('comments-container');
+        const newComment = createComment(full_name, comment);
+        commentContainer.prepend(newComment);
+        get('full_name').value = '';
+        get('comment').value = '';
+        updateCommentButton();
+        sortComments('asc');
+    }
+
+    function sortComments(order) {
+        const commentContainer = get('comments-container');
+        const comments = Array.from(commentContainer.children);
+
+        comments.sort(function (a, b) {
+            const dateA = new Date(a.dataset.date);
+            const dateB = new Date(b.dataset.date);
+
+            return order === 'asc' ? dateA - dateB : dateB - dateA;
+        });
+
+        commentContainer.innerHTML = '';
+
+        comments.forEach(function (comment) {
+            commentContainer.appendChild(comment);
+        });
+    }
+
+    get('comment_form').addEventListener('input', updateCommentButton);
+    get('comment_form').addEventListener('submit', addComment);
+    get('sort_asc_button').addEventListener('click', function () {
+        sortComments('asc');
     });
-
-    commentContainer.innerHTML = '';
-    comments.forEach(function(comment) {
-        commentContainer.appendChild(comment);
+    get('sort_desc_button').addEventListener('click', function () {
+        sortComments('desc');
     });
-}
-
-get('comment_form').addEventListener('input', updateCommentButton);
-
-get('comment_form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    addComment();
-    updateCommentButton();
-    sortComments('asc');
-});
-
-get('sort_asc_button').addEventListener('click', function() {
-    sortComments('asc');
-});
-
-get('sort_desc_button').addEventListener('click', function() {
-    sortComments('desc');
 });

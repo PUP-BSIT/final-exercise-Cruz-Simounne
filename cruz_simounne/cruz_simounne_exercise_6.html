@@ -9,108 +9,172 @@
 </head>
 
 <body>
-    <div>
-        <h1>Cruz Simounne</h1>
-    </div>
+    <div class="container">
+        <header>
+            <h1>Cruz Simounne</h1>
+        </header>
 
-    <div>
-        <h2>My Interests and Hobbies</h2>
-        <ul>
-            <li>
-                Reading books.
-                <p>I always enjoy reading my favorite books.</p>
-            </li>
-            <li>
-                Listening to music.
-                <p>My favorite song artists are Lola Amour, and iKON.</p>
-            </li>
-            <li>
-                Watching anime on television.
-                <p>My favorite anime is One Piece.</p>
-            </li>
-            <li>
-                Cooking our favorite foods.
-                <p>I love to cook for my family.</p>
-            </li>
-            <li>
-                Playing with my pets.
-                <p>I have wonderful pets named Austin and Asia.</p>
-            </li>
-        </ul>
-    </div>
+        <section class="interests">
+            <h2>My Interests and Hobbies</h2>
 
-    <div>
-        <h2>My Works</h2>
-        <ol>
-            <li><a href="#">Psychologist</a></li>
-            <li><a href="#">Nurse</a></li>
-            <li><a href="#">Graphic Designer</a></li>
-            <li><a href="#">Radiologic Technologist</a></li>
-            <li><a href="#">Veterinarian</a></li>
-        </ol>
-    </div>
+            <h3>Reading books</h3>
+            <p>I always enjoy reading my favorite books.</p>
 
-    <div>
-        <h2>Testimonials</h2>
-        <p>It's an absolute pleasure to write a testimonial for Simounne Cruz.
-        I am confident that Simounne Cruz will continue to excel in all their
-        endeavors, and I feel fortunate to have had the opportunity to
-        collaborate with her</p>
-    </div>
+            <h3>Listening to music</h3>
+            <p>My favorite song artists are Lola Amour and iKON.</p>
 
-    <div>
-        <h2>Gallery</h2>
-        <img src="pic5.jpg" alt="Picture 1">
-        <img src="pic5.jpg" alt="Picture 2">
-        <img src="pic5.jpg" alt="Picture 3">
-        <img src="pic5.jpg" alt="Picture 4">
-        <img src="pic5.jpg" alt="Picture 5">
-    </div>
+            <h3>Watching anime on television</h3>
+            <p>My favorite anime is One Piece.</p>
 
-    <h1>My Goals</h1>
+            <h3>Cooking our favorite foods</h3>
+            <p>I love to cook for my family.</p>
 
-    <div class="goals-section">
-        <h2>Goals</h2>
-        <ul class="goals_list">
-            <li>Keep learning new things.</li>
-            <li>Live with simplicity.</li>
-            <li>To learn more about HTML, CSS, and Javascript.</li>
-        </ul>
-    </div>
+            <h3>Playing with my pets</h3>
+            <p>I have wonderful pets named Austin and Asia.</p>
+        </section>
 
-    <div class="comment">
-        <h2>Comments</h2>
-        <div id="comments-container"></div>
-       
-    </div>
+        <section class="countries">
+            <h2>Countries of the World</h2>
+            <ul>
+                <li><a href="./countries/countries.html">
+                        Countries of the World</a></li>
+            </ul>
+        </section>
 
-    <div class="comment-section">
-        <form id="comment_form">
-            <label for="full_name">Full Name:</label>
-            <input type="text" id="full_name" 
-            name="full_name" required><br><br>
+        <section class="testimonials">
+            <h2>Testimonials</h2>
+            <p>It's an absolute pleasure to write a testimonial for
+                Simounne Cruz. I am confident that Simounne Cruz will
+                continue to excel in all their endeavors, and I feel
+                fortunate to have had the opportunity to collaborate with her.
+                -Kaila Marie Alima</p>
+        </section>
 
-            <label for="comment">Comment:</label>
-            <textarea id="comment" 
-            placeholder="Your Comment" required></textarea>
+        <section class="gallery">
+            <h2>My Treasures</h2>
+            <div class="image-gallery">
+                <div class="gallery-row">
+                    <img src="fam.jpg" alt="Picture 1">
+                    <img src="fam2.jpg" alt="Picture 2">
+                </div>
+                <div class="gallery-row">
+                    <img src="catto.jpeg" alt="Picture 3">
+                    <img src="cutie.jpeg" alt="Picture 4">
+                </div>
+                <div class="gallery-row">
+                    <img src="frennies.jpg" alt="Picture 5">
+                </div>
+            </div>
+        </section>
 
-            <button type="submit" 
-            id="comment_button" disabled>Comment</button>
+        <section class="goals">
+            <h2>My Current Goals</h2>
+            <ul class="goals-list">
+                <li>
+                    <h3>Spend more time with my family.</h3>
+                    <p>“Spend your money on the things you can buy.
+                        Spend your time on the things money can’t buy.”
+                        Spending quality time with my family is a top 
+                        priority. One’s life isn’t long so I shouldn’t forget
+                        to spend more time with my most precious people. </p>
+                </li>
+                <li>
+                    <h3>Get that college degree.</h3>
+                    <p>Earning a college degree is my primary goal as a
+                        current student, pivotal for achieving my broader
+                        aspirations. It's key to shaping my future, equipping
+                        me with vital skills, and opening doors to diverse 
+                        career opportunities, signifying a crucial step 
+                        towards a secure and fulfilling future.</p>
+                </li>
+                <li>
+                    <h3>Know myself better.</h3>
+                    <p> At 20, I'm on a quest to know myself better,
+                        embracingself-discovery and growth. Understanding
+                        who I am boosts confidence and shapes my choices.
+                        Prioritizing mental health is vital; it involves
+                        nurturing positivity, managing stress, and fostering
+                        healthier relationships. This journey isn't
+                        straightforward, but through self-reflection and
+                        genuine connections, I strive for a more balanced,
+                        fulfilling life.</p>
+                </li>
+            </ul>
+        </section>
 
-            <button id="sort_asc_button">Sort Ascending</button>
-            <button id="sort_desc_button">Sort Descending</button>
+        <section class="journal">
+            <h2>My Journal</h2>
+            <p>As the sun rises, painting the sky with hues of dawn, I find
+                myself amidst a maze of uncertainties that cloud my vision 
+                of the future. The next five years seem distant and shrouded
+                in ambiguity, leaving me anxious about where my path will 
+                lead. I grapple with the uncertainty of not knowing what I 
+                truly want, wrestling with a quest for clarity amid the fog 
+                of indecision.</p>
 
-        </form>
-    </div>
-        <h2>Countries of the World</h2>
-        <ul>
-            <li><a href="./cruz_simounne/countries/countries.html">
-                Countries of the World</a></li>
-        </ul>
-    <div>
+            <p>In the midst of this ambiguity, my aspirations stand as
+                guiding stars, shimmering faintly amidst the uncertainty. My
+                fervent hope is to find happiness and stability within myself.
+                Mental well-being becomes an anchor in the stormy sea of
+                uncertainty. I yearn for a future where I am content, where
+                inner peace resonates within me.</p>
 
+            <p>Financial stability also weighs heavily on my mind. I aspire
+                to secure a good job, not just for personal gain but to 
+                alleviate the burdens my parents bear. Their sacrifices 
+                propel me forward, igniting a fire within to strive for a 
+                career that supports them and allows me to contribute 
+                meaningfully.</p>
+
+            <p>Moreover, I harbor aspirations of delving into the realm of
+                psychology, a field that beckons me with its promise of
+                understanding the human mind. Pursuing this course becomes a
+                beacon of academic ambition, a path I earnestly desire to
+                tread upon.</p>
+
+            <p>Yet, beyond the tangible achievements and external validations,
+                I hold a quieter, more profound wish—to love and be proud of 
+                the person I become in the next five years. Self-acceptance 
+                and growth stand as the cornerstones upon which I wish to 
+                build my future.</p>
+
+            <p>As I pen down these aspirations, I acknowledge the
+                uncertainties that cloud my path. However, I hold onto these
+                dreams, nurturing them with hope and determination. With each
+                passing day, I aim to take steps, no matter how small, toward
+                the future I envision—a future filled with happiness, 
+                stability, accomplishments, and self-love.</p>
+        </section>
+
+        <section class="note">
+            <h2>Note for Myself in the Next 5 Years</h2>
+            <p>Always Remeber: Be sure you don't spend so much time making 
+                money that you forget that someday all you wish you could buy
+                is more time. Also, don't overwork yourself! Health is 
+                wealth.</p>
+        </section>
+
+        <section class="comment-section">
+            <h2>Comments</h2>
+            <div id="comments-container"></div>
+            <form id="comment_form">
+                <label for="full_name">Full Name:</label>
+                <input type="text" id="full_name" 
+                name="full_name" required><br><br>
+
+                <label for="comment">Comment:</label>
+                <textarea id="comment" 
+                placeholder="Your Comment" required></textarea>
+
+                <button type="submit" id="comment_button">Comment</button>
+
+                <button id="sort_asc_button">Sort Ascending</button>
+                <button id="sort_desc_button">Sort Descending</button>
+            </form>
+        </section>
     </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
